@@ -65,16 +65,17 @@ const handleLogin = async () => {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f7fa;
+  background-color: var(--bg-color);
 }
 
 .login-form-wrapper {
-  background-color: #fff;
+  background-color: var(--bg-light);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
   width: 100%;
   max-width: 400px;
+  border: 1px solid var(--border-color);
 }
 
 .login-logo {
@@ -84,13 +85,13 @@ const handleLogin = async () => {
 }
 
 .logo-img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #2c3e50;
+  color: var(--primary-color);
 }
 </style>

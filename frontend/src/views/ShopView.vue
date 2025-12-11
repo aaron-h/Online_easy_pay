@@ -135,6 +135,8 @@ onMounted(() => {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  background-color: var(--bg-color);
+  min-height: 100vh;
 }
 
 .shop-header {
@@ -145,12 +147,13 @@ onMounted(() => {
 .shop-header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .shop-header p {
   font-size: 1.1rem;
-  color: #7f8c8d;
+  color: var(--text-secondary);
 }
 
 .category-filter {
@@ -171,6 +174,9 @@ onMounted(() => {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
 }
 
 .shop-item-image {
@@ -192,18 +198,18 @@ onMounted(() => {
 .shop-item-title {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #2c3e50;
+  color: var(--text-color);
 }
 
 .shop-item-category {
   font-size: 0.9rem;
-  color: #165dff;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
 .shop-item-description {
   font-size: 0.95rem;
-  color: #7f8c8d;
+  color: var(--text-secondary);
   margin-bottom: 20px;
   flex: 1;
   display: -webkit-box;
@@ -223,11 +229,23 @@ onMounted(() => {
 .shop-item-price {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #e74c3c;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
 }
 
 .empty-state {
   text-align: center;
   padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+/* 自定义Element Plus组件样式 */
+:deep(.el-card__body) {
+  background-color: var(--bg-light) !important;
+  color: var(--text-color) !important;
+}
+
+:deep(.el-empty__text) {
+  color: var(--text-secondary) !important;
 }
 </style>

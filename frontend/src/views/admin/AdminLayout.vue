@@ -87,8 +87,9 @@ const handleLogout = () => {
 }
 
 .aside {
-  background-color: #001529;
-  color: #fff;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  border-right: 1px solid var(--border-color);
 }
 
 .logo {
@@ -99,24 +100,25 @@ const handleLogout = () => {
   line-height: 60px;
   font-size: 18px;
   font-weight: bold;
-  background-color: #165dff;
+  background-color: var(--primary-color);
 }
 
 .logo-img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   vertical-align: middle;
 }
 
 .logo-text {
   vertical-align: middle;
-  color: #fff;
+  color: var(--bg-color);
 }
 
 .header {
-  background-color: #fff;
-  border-bottom: 1px solid #e8e8e8;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-color);
   padding: 0;
+  color: var(--text-color);
 }
 
 .header-content {
@@ -137,10 +139,46 @@ const handleLogout = () => {
   display: flex;
   align-items: center;
   gap: 5px;
+  color: var(--text-color);
 }
 
 .main {
-  background-color: #f5f7fa;
+  background-color: var(--bg-color);
   padding: 20px;
+  color: var(--text-color);
+}
+
+/* 自定义菜单样式 */
+:deep(.el-menu-vertical-demo) {
+  background-color: var(--bg-light) !important;
+  border-right: none !important;
+}
+
+:deep(.el-menu-item) {
+  color: var(--text-color) !important;
+}
+
+:deep(.el-menu-item.is-active) {
+  background-color: var(--bg-lighter) !important;
+  color: var(--primary-color) !important;
+}
+
+:deep(.el-menu-item:hover) {
+  background-color: var(--bg-lighter) !important;
+  color: var(--primary-light) !important;
+}
+
+:deep(.el-dropdown-menu) {
+  background-color: var(--bg-lighter) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+:deep(.el-dropdown-item) {
+  color: var(--text-color) !important;
+}
+
+:deep(.el-dropdown-item:hover) {
+  background-color: var(--bg-light) !important;
+  color: var(--primary-color) !important;
 }
 </style>

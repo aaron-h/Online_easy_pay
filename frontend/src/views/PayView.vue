@@ -240,12 +240,15 @@ onUnmounted(() => {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: #f5f7fa;
+  background-color: var(--bg-color);
 }
 
 .pay-card {
   width: 100%;
   max-width: 600px;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
 .pay-header {
@@ -254,7 +257,7 @@ onUnmounted(() => {
 }
 
 .pay-header h2 {
-  color: #2c3e50;
+  color: var(--primary-color);
   margin: 0;
 }
 
@@ -263,10 +266,11 @@ onUnmounted(() => {
 }
 
 .order-info {
-  background-color: #fafafa;
+  background-color: var(--bg-lighter);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+  border: 1px solid var(--border-color);
 }
 
 .order-item {
@@ -280,18 +284,19 @@ onUnmounted(() => {
 
 .label {
   width: 100px;
-  color: #909399;
+  color: var(--text-secondary);
 }
 
 .value {
-  color: #2c3e50;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .value.price {
-  color: #f56c6c;
+  color: var(--primary-color);
   font-size: 24px;
   font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
 }
 
 .pay-method {
@@ -300,7 +305,7 @@ onUnmounted(() => {
 
 .pay-method h3 {
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: var(--text-color);
   font-size: 16px;
 }
 
@@ -308,19 +313,22 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   padding: 10px;
-  border: 1px solid #dcdfe6;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   cursor: pointer;
+  background-color: var(--bg-light);
+  color: var(--text-color);
 }
 
 .pay-method-item:hover {
-  border-color: #409eff;
+  border-color: var(--primary-color);
+  background-color: var(--bg-lighter);
 }
 
 .pay-method-item .el-icon {
   margin-right: 10px;
   font-size: 24px;
-  color: #165dff;
+  color: var(--primary-color);
 }
 
 .qrcode-container {
@@ -330,7 +338,7 @@ onUnmounted(() => {
 
 .qrcode-container h3 {
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: var(--text-color);
   font-size: 16px;
 }
 
@@ -339,18 +347,20 @@ onUnmounted(() => {
   justify-content: center;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--bg-lighter);
   border-radius: 8px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+  border: 1px solid var(--border-color);
 }
 
 .countdown {
   margin-bottom: 10px;
-  color: #f56c6c;
+  color: var(--primary-color);
 }
 
 .countdown-time {
   font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
 }
 
 .pay-actions {
@@ -366,12 +376,35 @@ onUnmounted(() => {
 
 .empty-icon {
   font-size: 64px;
-  color: #dcdfe6;
+  color: var(--border-color);
   margin-bottom: 20px;
 }
 
 .empty-state p {
-  color: #909399;
+  color: var(--text-secondary);
   margin-bottom: 20px;
+}
+
+/* 自定义Element Plus组件样式 */
+:deep(.el-card__header) {
+  background-color: var(--bg-light) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+:deep(.el-card__body) {
+  background-color: var(--bg-light) !important;
+}
+
+:deep(.el-radio__input.is-checked .el-radio__inner) {
+  border-color: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
+}
+
+:deep(.el-radio__input.is-checked+.el-radio__label) {
+  color: var(--primary-color) !important;
+}
+
+:deep(.el-progress__bar-inner) {
+  background-color: var(--primary-color) !important;
 }
 </style>

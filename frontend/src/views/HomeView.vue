@@ -19,18 +19,25 @@
 .home {
   text-align: center;
   padding: 2rem;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #7f8c8d;
+  color: var(--text-secondary);
 }
 
 .logo-container {
@@ -40,8 +47,8 @@ p {
 }
 
 .home-logo {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
 }
 
 .actions {

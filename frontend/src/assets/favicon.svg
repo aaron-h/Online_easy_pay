@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 背景 -->
+  <rect width="64" height="64" fill="#002b36" />
+  
+  <!-- 主框架 -->
+  <rect x="8" y="8" width="48" height="48" rx="4" fill="#003a4a" stroke="#00d4ff" stroke-width="1.5" />
+  
+  <!-- 前景卡片 -->
+  <rect x="16" y="24" width="32" height="20" rx="3" fill="#003a4a" stroke="#00d4ff" stroke-width="1.5" />
+  
+  <!-- 卡片磁条 -->
+  <rect x="20" y="30" width="24" height="3" rx="1" fill="#00d4ff" opacity="0.7" />
+  
+  <!-- 简化美元符号 -->
+  <path d="M28 38 Q28 35 32 35 L32 33 L34 33 L34 35 Q38 35 38 38 Q38 41 34 41 L34 43 L32 43 L32 41 Q30 41 30 39 Q30 38 32 38 L32 36 Q30 36 30 35 Q30 34 32 34 L32 32 L30 32 L30 34 Q26 34 26 37 Q26 40 30 40 L30 41 Q26 41 26 44 Q26 47 30 47 L34 47 Q38 47 38 44 Q38 41 34 41 L34 40 Q35 40 35 41 Q35 42 34 42 Q32 42 32 41 Q32 40 34 40 L34 38 Q35 38 35 37 Q35 36 34 36 Q32 36 32 37 Q32 38 30 38 L30 40 Q28 40 28 38 Z" fill="#00d4ff" />
+</svg>
