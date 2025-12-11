@@ -1,48 +1,96 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <!-- 背景圆形 - 现代渐变 -->
   <defs>
-    <linearGradient id="modernGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0072ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6600ff;stop-opacity:1" />
     </linearGradient>
     <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.4" />
       <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
     </radialGradient>
+    <filter id="glowFilter" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="blur" in2="SourceGraphic" operator="over"/>
+    </filter>
   </defs>
   
-  <!-- 背景圆环 -->
-  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#modernGradient)" stroke-width="6" />
+  <!-- 背景圆环 - 科技感边框 -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#techGradient)" stroke-width="8" filter="url(#glowFilter)" />
   
   <!-- 中心发光效果 -->
-  <circle cx="100" cy="100" r="85" fill="url(#glowGradient)" opacity="0.5" />
+  <circle cx="100" cy="100" r="90" fill="url(#glowGradient)" opacity="0.3" />
   
-  <!-- 现代支付符号 - 简化的数字钱包 -->
-  <rect x="65" y="75" width="70" height="50" rx="8" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- 科技网格背景 -->
+  <g opacity="0.1">
+    <!-- 横向网格线 -->
+    <line x1="20" y1="40" x2="180" y2="40" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="20" y1="60" x2="180" y2="60" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="20" y1="80" x2="180" y2="80" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="20" y1="100" x2="180" y2="100" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="20" y1="120" x2="180" y2="120" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="20" y1="140" x2="180" y2="140" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="20" y1="160" x2="180" y2="160" stroke="#ffffff" stroke-width="0.5" />
+    <!-- 纵向网格线 -->
+    <line x1="40" y1="20" x2="40" y2="180" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="60" y1="20" x2="60" y2="180" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="80" y1="20" x2="80" y2="180" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="100" y1="20" x2="100" y2="180" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="120" y1="20" x2="120" y2="180" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="140" y1="20" x2="140" y2="180" stroke="#ffffff" stroke-width="0.5" />
+    <line x1="160" y1="20" x2="160" y2="180" stroke="#ffffff" stroke-width="0.5" />
+  </g>
   
-  <!-- 钱包顶部的现代设计 -->
-  <path d="M65 75 Q100 60 135 75" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- 握双手图标 - 科技风格 -->
+  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <!-- 左手 -->
+    <path d="M65 120 Q50 100 55 80 Q65 70 75 75 Q85 80 80 90 Q75 100 70 110 Q65 120 60 125" />
+    <!-- 右手 -->
+    <path d="M135 120 Q150 100 145 80 Q135 70 125 75 Q115 80 120 90 Q125 100 130 110 Q135 120 140 125" />
+    <!-- 双手握持的圆形（代表支付安全） -->
+    <circle cx="100" cy="95" r="15" />
+  </g>
   
-  <!-- 支付图标 - 简化的硬币 -->
-  <circle cx="100" cy="100" r="18" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <line x1="93" y1="100" x2="107" y2="100" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
-  <line x1="100" y1="93" x2="100" y2="107" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+  <!-- 支付符号 - 简化的硬币，位于双手中央 -->
+  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="95" r="10" />
+    <line x1="94" y1="95" x2="106" y2="95" />
+    <line x1="100" y1="89" x2="100" y2="101" />
+  </g>
   
-  <!-- 现代科技装饰 - 动态线条 -->
-  <path d="M40 100 Q60 80 80 100" fill="none" stroke="url(#modernGradient)" stroke-width="2" opacity="0.8" />
-  <path d="M120 100 Q140 120 160 100" fill="none" stroke="url(#modernGradient)" stroke-width="2" opacity="0.8" />
+  <!-- 科技光效 - 环绕的动态线条 -->
+  <g fill="none" stroke="url(#techGradient)" stroke-width="2" opacity="0.7">
+    <!-- 左上光效 -->
+    <path d="M40 40 Q60 30 80 40" />
+    <!-- 右上光效 -->
+    <path d="M160 40 Q140 30 120 40" />
+    <!-- 左下光效 -->
+    <path d="M40 160 Q60 170 80 160" />
+    <!-- 右下光效 -->
+    <path d="M160 160 Q140 170 120 160" />
+  </g>
   
-  <!-- 现代科技点 - 发光效果 -->
-  <circle cx="35" cy="100" r="2" fill="#667eea" opacity="0.9" />
-  <circle cx="45" cy="100" r="1.5" fill="#764ba2" opacity="0.8" />
-  <circle cx="55" cy="100" r="1" fill="#f093fb" opacity="0.7" />
+  <!-- 科技粒子效果 -->
+  <g opacity="0.8">
+    <!-- 左上粒子 -->
+    <circle cx="35" cy="35" r="2" fill="#00d4ff" />
+    <circle cx="45" cy="30" r="1.5" fill="#0072ff" />
+    <circle cx="55" cy="38" r="1" fill="#6600ff" />
+    <!-- 右上粒子 -->
+    <circle cx="165" cy="35" r="2" fill="#00d4ff" />
+    <circle cx="155" cy="30" r="1.5" fill="#0072ff" />
+    <circle cx="145" cy="38" r="1" fill="#6600ff" />
+    <!-- 左下粒子 -->
+    <circle cx="35" cy="165" r="2" fill="#00d4ff" />
+    <circle cx="45" cy="170" r="1.5" fill="#0072ff" />
+    <circle cx="55" cy="162" r="1" fill="#6600ff" />
+    <!-- 右下粒子 -->
+    <circle cx="165" cy="165" r="2" fill="#00d4ff" />
+    <circle cx="155" cy="170" r="1.5" fill="#0072ff" />
+    <circle cx="145" cy="162" r="1" fill="#6600ff" />
+  </g>
   
-  <circle cx="165" cy="100" r="2" fill="#667eea" opacity="0.9" />
-  <circle cx="155" cy="100" r="1.5" fill="#764ba2" opacity="0.8" />
-  <circle cx="145" cy="100" r="1" fill="#f093fb" opacity="0.7" />
-  
-  <!-- 现代边框光效 -->
-  <circle cx="100" cy="100" r="95" fill="none" stroke="#667eea" stroke-width="1" opacity="0.5" />
-  <circle cx="100" cy="100" r="80" fill="none" stroke="#f093fb" stroke-width="1" opacity="0.5" />
+  <!-- 中心科技点 - 脉冲效果 -->
+  <circle cx="100" cy="95" r="3" fill="#ffffff" opacity="0.9" />
 </svg>
