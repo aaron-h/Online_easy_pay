@@ -3,7 +3,7 @@
 </p>
 
 
-<h3 align="center">🚀 Vpay 服务端</h3>
+<h3 align="center">🚀 OnlinePay 服务端</h3>
 
 <p align="center">
  <img src="https://img.shields.io/static/v1?label=licenes&message=GPL%20V3&color=important&style=for-the-badge"/>
@@ -25,7 +25,7 @@
 
 ## 简介
 
-Vpay ——一款个人收款解决方案，使个人开发者能够安全高效地处理在线交易。
+OnlinePay ——一款个人收款解决方案，使个人开发者能够安全高效地处理在线交易。
 
 
 ## 安装指南
@@ -107,13 +107,13 @@ location / {
 3. 配置邮件通知
 ![img_4.png](img_4.png)
 
-### 接入Vpay支付
+### 接入OnlinePay支付
 
-参考[vpay-sdk](https://github.com/Vpay-Collection/vpay-sdk)进行接入
+参考[onlinepay-sdk](https://github.com/aaron-h/Online_easy_pay)进行接入
 
 ## 文档
 
-[阅读文档](https://vpay.ankio.net/)
+[阅读文档](https://onlinepay.example.com/)
 
 
 ## 开源协议

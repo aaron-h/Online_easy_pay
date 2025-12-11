@@ -1,5 +1,5 @@
 router.init();
-router.titlePrefix = "Vpay";
+router.titlePrefix = "OnlinePay";
 
 //进行路由
 function replaceTpl(dom, data) {

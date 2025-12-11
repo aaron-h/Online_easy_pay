@@ -52,9 +52,9 @@ class Notice extends BaseController
         }
         Config::setConfig('notice', $this->config->toArray());
         //日报需要处理定时任务
-        TaskerManager::del("Vpay日报");
+        TaskerManager::del("OnlinePay日报");
         if ($this->config->daily_notice) {
-            TaskerManager::add(TaskerTime::day(23, 50), new DailyTasker(), "Vpay日报", -1);
+            TaskerManager::add(TaskerTime::day(23, 50), new DailyTasker(), "OnlinePay日报", -1);
         }
 
         return $this->json(200, "更新成功");
@@ -66,13 +66,13 @@ class Notice extends BaseController
             "#4caf50",
             "#fff",
             '',
-            'Vpay',
-            "Vpay登录测试",
+            'OnlinePay',
+            "OnlinePay登录测试",
             "<p>亲爱的用户:</p>
                        <p>该邮件是一封测试邮件<b></b></p>
                 ");
         ob_start();
-        $result = AnkioMail::send($this->config->admin, "Vpay邮件测试", $file, "Vpay", true);
+        $result = AnkioMail::send($this->config->admin, "OnlinePay邮件测试", $file, "OnlinePay", true);
         if ($result) {
             echo "测试成功";
         } else {

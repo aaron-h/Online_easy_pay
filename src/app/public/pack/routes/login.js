@@ -7,7 +7,7 @@ route("login", {
             dom.find("#sentence").text(data);
         });
 
-        dom.find('#title').text("Vpay后台管理");
+        dom.find('#title').text("OnlinePay后台管理");
         request("ankio/login/islogin",{},null).done(function (data) {
             if(data.code===200){
                 go("");

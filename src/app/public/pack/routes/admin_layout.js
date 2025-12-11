@@ -16,7 +16,7 @@ function setMode() {
 }
 
 route("", {
-    title: "Vpay",
+    title: "OnlinePay",
     depends: ["index/main/config", "admin/main/menu"],
     onenter: function (query, dom, result) {
         if (!result[0].data.login) {
